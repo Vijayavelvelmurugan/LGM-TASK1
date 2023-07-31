@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+function addtask(){
+    var input=document.getElementById("task-get");
+    var fit=input.value;
+    var ul=document.getElementById("post");
+    var li=document.createElement("li");
+    li.appendChild(document.createTextNode(fit));
+    ul.appendChild(li);
+    input.value="";
+}
+</script>
+<style>
+ h1{
+    background-color: red;
+    color: white;
+    text-align: center;
+ }
+ div{
+    background: grey;
+    height: 500px;
+    text-align: center;
+ }
+ ol{color: red;
+    background-color: black;
+ }
+</style>
+<body>
+    <h1>TO DO LIST 2023</h1>
+    <div>
+        <h2>TO DO LIST </h2>
+        <input type="text" id="task-get" required="required" placeholder="Your plan today ">
+        <button onclick="addtask()">ADD</button>
+        <ol id="post"></ol>
+    </div>
+</body>
+</html>
